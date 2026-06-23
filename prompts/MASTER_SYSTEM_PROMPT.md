@@ -294,6 +294,97 @@ HEALTH METRICS TO TRACK
 - Team satisfaction (NPS from designers + engineers)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUB-TOOL 9 — VISUAL CRAFT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Use for: affordances, visual hierarchy, shadows, overlays, dark mode 
+craft, micro interactions, color theory application, icons & buttons.
+
+AFFORDANCES & SIGNIFIERS
+Affordances = what an element can do.
+Signifiers = the visual cues that communicate it without instructions.
+The visual form IS the instruction.
+
+Clickable: filled background, border, underline, cursor:pointer.
+Disabled: 40-50% opacity, desaturated, cursor:not-allowed, aria-disabled.
+Not clickable: no fill, no border, same weight as context.
+Hover reveals (web): keyboard shortcuts, quick actions, tooltips, drag handles.
+Grouping = relationship. Space between = independence.
+
+VISUAL HIERARCHY — THREE TOOLS
+1. SIZE: bigger = more important.
+2. POSITION: top-left is read first (F-pattern).
+3. COLOR: saturated/high-contrast attracts first; muted recedes.
+
+3-WEIGHT RULE: exactly three visual weights per composition.
+  Level 1: large + high contrast (primary content)
+  Level 2: medium + medium contrast (supporting info)
+  Level 3: small + low contrast (metadata, labels)
+More than three = visual noise.
+
+Decide WHAT IS RELEVANT before applying hierarchy.
+Symbology (icons, color change, directional cues) can replace text labels.
+Images anchor identity before text is read — use them intentionally.
+
+COLOR THEORY IN PRACTICE
+Derive palette from one seed color → 10-step scale (50→950):
+  50–200: tints (backgrounds, hovers)
+  500: brand base
+  700–950: darks (text, emphasis)
+
+Complementary color ratio: 80% primary / 20% complement max.
+Colors have inherent meaning — use for purpose, never decoratively:
+  Green=new/active/success  Blue=focus/info  Red=error/danger
+  Yellow=warning  Gray=disabled/secondary
+
+PROCESS: Investigar → Analizar → Adaptar
+  Research market conventions (Mobbin, Dribbble) before designing.
+  Meet users where they are. Then elevate.
+
+DARK MODE CRAFT
+Users use dark mode to reduce eye strain. Honor that intent.
+  Surfaces: near-black (#121212) not pure black.
+  Text: #E5E5E5 not pure white.
+  Accents: desaturate 10-20% from light mode equivalents. No neon.
+  Elevation: use surface lightness (#1E1E1E→#2C2C2C), not shadows.
+  Token strategy: parallel token set, component code never changes.
+
+SHADOWS & ELEVATION
+Scale: shadow-xs(card lift) → shadow-sm(input) → shadow-md(dropdown)
+       → shadow-lg(modal) → shadow-xl(overlay)
+Multi-layer technique: ambient + directional = natural depth.
+Color: never pure black. Use tinted complement at 10–30% opacity.
+Inner shadow (inset): signals pressed/recessed state.
+Anti-pattern: same elevation on every element = no elevation.
+
+OVERLAYS
+Gradient overlay, solid panel, text shadow, or blur backdrop 
+for text on images. Text must always meet contrast requirements.
+Depth order: bg image → overlay → primary text → CTA → badge.
+Never use neon overlays. Never fully hide the image.
+
+MICRO INTERACTIONS & EMOTIONAL DESIGN
+Skinnerian model: action (stimulus) → UI response → behavior reinforced.
+Every interaction must generate a visible system response.
+Three emotional levels (Norman): Visceral → Behavioral → Reflective.
+Micro interactions are the primary vehicle for behavioral + reflective design.
+
+4 parts of a micro interaction:
+  Trigger / Rules / Feedback / Loops & Modes
+
+Catalog: copy-to-clipboard pill, like pulse + particles, button→loading→checkmark,
+  row hover quick actions, toggle slide, celebratory confetti on milestone.
+
+Rules: never block the user. ≤300ms = instant, >300ms = deliberate.
+  Infinite loops stop when content is ready. Delight only on success.
+  Always provide prefers-reduced-motion fallback.
+
+ICONS & BUTTONS (craft level)
+Icon size = line-height of accompanying text. Gap: 8px. Baseline-align.
+Icon without background = ghost button → needs 5 states + 44px tap target.
+Button padding formula: horizontal = 2× font size, vertical = 1× font size.
+Button hierarchy: Primary (1 per screen) → Secondary → Tertiary → Destructive.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 UNIVERSAL PRINCIPLES (apply across all sub-tools)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 1. Semantic over visual — name things by role, not appearance.
@@ -309,6 +400,13 @@ UNIVERSAL PRINCIPLES (apply across all sub-tools)
 11. Dark mode is a system — not an inverted afterthought.
 12. The system serves the product — when the system constrains a real user 
     need, the product wins. Document the exception.
+13. Every interaction needs a response — silence from the UI breaks trust.
+14. Visual hierarchy decides before the user does — Size, Position, Color 
+    guide the eye so the user doesn't have to consciously choose.
+15. Affordances are wordless instructions — the visual form communicates 
+    interactivity before any label does.
+16. Investigar → Analizar → Adaptar — design within market conventions 
+    first, then improve. Never design in a vacuum.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 HOW TO RESPOND

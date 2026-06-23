@@ -14,14 +14,15 @@ jnc-design/
 ├── DESIGN_COMPASS.md           ← Full reference guide (all principles)
 └── prompts/
     ├── MASTER_SYSTEM_PROMPT.md ← Paste into any AI to activate the full Compass
-    ├── 01-foundations.md       ← Design tokens, grid, color, type, icons
-    ├── 02-components.md        ← Component architecture and API design
+    ├── 01-foundations.md       ← Design tokens, grid, color, type, icons, hierarchy
+    ├── 02-components.md        ← Component architecture, affordances, states, API design
     ├── 03-accessibility.md     ← Inclusive design and WCAG compliance
     ├── 04-voice-tone.md        ← UX copy and content guidelines
-    ├── 05-motion.md            ← Animation and interaction principles
+    ├── 05-motion.md            ← Animation, micro interactions, emotional design
     ├── 06-cross-platform.md    ← Web, iOS, Android, React Native
     ├── 07-context-adapters.md  ← Industry-specific guidance
-    └── 08-governance.md        ← Running a design system as a product
+    ├── 08-governance.md        ← Running a design system as a product
+    └── 09-visual-craft.md      ← Affordances, hierarchy, shadows, overlays, dark mode
 ```
 
 ---
@@ -51,20 +52,24 @@ Read `DESIGN_COMPASS.md` directly as a design reference without AI.
 
 | File | Sub-Tool | Use It For |
 |---|---|---|
-| `01-foundations.md` | Foundations Forge | Tokens, grid, color, typography, icons |
-| `02-components.md` | Component Architect | Building reusable UI components |
+| `01-foundations.md` | Foundations Forge | Tokens, grid, color, type, shadows, hierarchy |
+| `02-components.md` | Component Architect | Components, affordances, states, API design |
 | `03-accessibility.md` | Accessibility Blueprint | WCAG, ARIA, keyboard, screen readers |
 | `04-voice-tone.md` | Voice & Tone Studio | UX copy, error messages, empty states |
-| `05-motion.md` | Motion Playbook | Animations, transitions, easing |
+| `05-motion.md` | Motion Playbook | Animations, micro interactions, emotional design |
 | `06-cross-platform.md` | Cross-Platform Mapper | Web + mobile + native decisions |
 | `07-context-adapters.md` | Context Adapters | Enterprise, consumer, gov, fintech, dev tools |
 | `08-governance.md` | Governance Engine | Design system ops, versioning, contribution |
+| `09-visual-craft.md` | Visual Craft | Affordances, hierarchy, shadows, overlays, dark mode |
 
 ---
 
 ## Sources
 
-Distilled from direct exploration of:
+**Design Systems (direct exploration):**
 Material Design 3 · Apple HIG · Atlassian · Shopify Polaris · GitHub Primer · GitLab Pajamas · IBM Carbon · Microsoft Fluent 2 · Elastic UI · Adobe React Aria · Radix UI · Zag.js · Semantic UI · Evergreen · Tamagui · AgnosticUI · Thumbprint · GOV.UK · Gestalt (Pinterest) · BBC GEL · and 100+ systems catalogued by Adele (UXPin) and Design System Repo.
 
-Aggregated from: [awesome-styleguides](https://github.com/streamich/awesome-styleguides)
+**Applied UI/UX Theory (Sub-Tool 9):**
+UI/UX Concept — 11 conceptos visuales fundamentales: Affordances & Signifiers · Visual Hierarchy · Grids & Spacing · Typography & Font Sizing · Color Theory · Dark Mode · Shadows · Icons & Buttons · Feedback & States · Micro Interactions · Overlays.
+
+**Aggregated from:** [awesome-styleguides](https://github.com/streamich/awesome-styleguides)

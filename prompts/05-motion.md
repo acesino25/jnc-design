@@ -170,6 +170,82 @@ const prefersReducedMotion =
 Default to Option A for most transitions.
 Use Option B when the animation serves critical feedback (errors, success).
 
+━━━ MICRO INTERACTIONS — EMOTIONAL DESIGN LAYER ━━━
+
+BEHAVIORAL FOUNDATION (Skinner applied to UI)
+  A micro interaction is a stimulus-response loop designed to:
+    a) Confirm an action occurred (behavioral feedback)
+    b) Train the user's mental model (repeatable behavior)
+    c) Create emotional resonance (feeling about the product)
+  
+  Simple feedback: button changes color on click.
+  Micro interaction: button changes color + icon morphs + 
+                     confirmation appears + element transforms.
+
+THE FOUR PARTS (Dan Saffer's model)
+  1. Trigger  — What initiates it (click, hover, scroll, time elapsed)
+  2. Rules    — What happens and in what sequence
+  3. Feedback — What the user perceives (visual / haptic / audio)
+  4. Loops & Modes — Does it repeat? End state? Error mode?
+
+THREE LEVELS OF EMOTIONAL DESIGN (Norman) applied to motion
+  Visceral  → First impression quality. Animation feels polished or cheap.
+              Achieved by: correct easing, appropriate duration, GPU properties.
+  Behavioral → Does it feel responsive? Does it help me understand the system?
+               Achieved by: immediate trigger response (≤ 100ms), clear state.
+  Reflective → Did I enjoy using this? Did I feel respected?
+               Achieved by: delight moments, no excessive/forced animation.
+
+MICRO INTERACTION CATALOG
+
+  Copy to clipboard
+    Trigger: click copy icon
+    Rules: clipboard write → confirm success
+    Feedback: icon morphs checkmark (150ms) + "Copied!" pill appears (200ms)
+              → auto-fades after 2000ms (200ms fade)
+    Loop: single shot — resets to default after fade
+
+  Like / Favorite
+    Trigger: click heart/star
+    Rules: toggle liked state
+    Feedback: fill with color (200ms) + scale pulse 1→1.25→1 (150ms)
+              + optional particle burst (300ms, delight tier)
+    Loop: toggle — reverse animation on unlike
+
+  Button → Loading → Success
+    Trigger: form submit
+    Rules: disable → spinner → await response → checkmark → navigate/reset
+    Feedback: label fades (100ms) → spinner appears → 
+              on success: checkmark draw-on (300ms, emphasize easing)
+    Error mode: spinner → shake + error color + re-enable
+
+  Row hover quick actions
+    Trigger: pointer enters list row
+    Rules: reveal action icons on trailing edge
+    Feedback: icons fade in + slide 4px from right (150ms, ease-out)
+    Loop: reverse on pointer leave (100ms)
+
+  Toggle switch
+    Trigger: click or space key
+    Rules: boolean flip
+    Feedback: thumb slides across track (200ms) + color fills track behind
+    Note: ease-in-out is acceptable here — the symmetry is intentional.
+
+  Major success (celebratory delight)
+    Trigger: completion of meaningful milestone (first project, upgrade)
+    Rules: show success + play celebration
+    Feedback: checkmark draw-on (300ms) + confetti burst (500ms) + 
+              success toast slides in (200ms)
+    Use sparingly — delight moments lose power if overused.
+
+MICRO INTERACTION RULES
+  → Never block navigation — run alongside, never in front of the user
+  → Under 300ms = feels instant. Over 300ms = deliberate. No in-between.
+  → Infinite loops (spinners) stop the moment content is ready.
+  → Delight only on positive outcomes. Never celebrate errors.
+  → prefers-reduced-motion: instant state change fallback, always.
+  → Test on mid-range device — not just a MacBook Pro.
+
 ━━━ CHECKLIST BEFORE SHIPPING AN ANIMATION ━━━
 □ Does it serve one of the four purposes (Feedback/Orientation/Focus/Delight)?
 □ Is the duration appropriate for the perceived change size?

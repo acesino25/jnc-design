@@ -115,6 +115,43 @@ Form Patterns
   Submit button disables during loading, re-enables on error.
   Label every field. Never placeholder-only labels.
 
+━━━ AFFORDANCES & SIGNIFIERS ━━━
+Every component must communicate its interactivity without instructions.
+The visual form IS the instruction.
+
+CLICKABILITY VOCABULARY
+  Interactive (afforded):
+    → Filled background (button pill, chip, card with border)
+    → Underline (text links in body copy)
+    → Cursor: pointer on hover
+    → Border or elevated surface that separates from background
+    → Icon flush with text label
+  
+  Non-interactive (passive):
+    → No fill, no border, same weight as surrounding content
+    → Cursor: default
+  
+  Disabled (present but unavailable):
+    → 40–50% opacity reduction
+    → Desaturated color
+    → Optional: gradient or wash overlay
+    → Cursor: not-allowed
+    → aria-disabled="true" on the element
+
+GROUPING IS COMMUNICATION (Gestalt proximity)
+  Elements placed close together signal relationship.
+  The content below a tab group signals it belongs to the selected tab.
+  Proximity IS a signifier — use it intentionally.
+
+HOVER SIGNIFIERS (web, pointer devices only)
+  Reveal-on-hover patterns teach interaction without cluttering default state:
+  → Keyboard shortcuts on menu item hover (⌘N, ⌘K)
+  → Quick action icons on list row hover (Edit / Delete / Share)
+  → Contextual tooltip on icon hover (explains purpose)
+  → Drag handle appearing on sortable item hover
+  Rule: what's revealed on hover must be discoverable. If critical, 
+  make it always visible. Hover = enhancement, not primary path.
+
 ━━━ DOCUMENTATION TEMPLATE ━━━
 Every component must have:
   Name + one-line description
@@ -129,11 +166,52 @@ Every component must have:
   Minimal code example
   Real-world usage example
 
+━━━ FEEDBACK & STATES — BEHAVIORAL THEORY ━━━
+From a behavioral science perspective (Skinner's reinforcement model):
+  User action  = stimulus
+  UI response  = feedback
+  Effect       = behavior reinforced or discouraged
+
+Every interaction must generate a system response.
+A button that clicks with no visual change = broken trust.
+A button with clear state transitions = behavior becomes memorable.
+
+THE 5 MANDATORY BUTTON STATES
+Every button must have all five designed before shipping:
+  1. Default  — resting state, full opacity and color
+  2. Hover    — subtle darkening or lightening, cursor: pointer
+  3. Pressed  — visible depression (scale down, darken, inner shadow)
+  4. Disabled — 40–50% opacity, cursor: not-allowed, no interaction
+  5. Loading  — spinner replaces or appends to label, non-interactive
+
+INPUT STATES (more granular than buttons)
+  Empty → Focused → Filled → Error → Disabled → Success (optional)
+  
+  Error state must include:
+    → Border color: danger token (red)
+    → Error icon in the field (optional)
+    → Error message below in danger text color
+    → aria-invalid="true" + aria-describedby linking to error message
+  
+  Success state (for async validation):
+    → Border color: success token (green)
+    → Checkmark icon
+    → Never show success until fully validated server-side
+
+NOTIFICATION TYPES (every app needs all four)
+  Success → Green + checkmark. "Invoice sent." Auto-dismiss 5s.
+  Error   → Red + X. "Failed to save." Persistent until dismissed.
+  Warning → Yellow + triangle. "Session expiring." Persistent.
+  Info    → Blue + i. "New version available." Auto or persistent.
+  
+  Each must have: icon + message + optional action + optional dismiss (×).
+
 ━━━ OUTPUT FORMAT ━━━
 When answering component questions:
 1. Name the architecture philosophy you're applying and why.
-2. Map the component's states before proposing the API.
+2. Map the component's states (including all 5 for interactive elements).
 3. Show a minimal props API definition.
 4. Flag any accessibility implications.
 5. Note what NOT to do — anti-patterns matter as much as patterns.
+6. For affordance questions: describe the signifier vocabulary being used.
 ```

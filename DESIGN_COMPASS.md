@@ -754,11 +754,350 @@ Track these metrics to know if your system is working:
 
 ---
 
+---
+
+## 9. Visual Craft
+> *Use when: designing the perceptual, emotional, and visual layer of any interface — hierarchy, affordances, depth, shadows, dark mode, micro interactions.*
+
+*Extraído y expandido de: UI/UX Concept — teoría aplicada sobre los 11 conceptos visuales fundamentales.*
+
+---
+
+### 9.1 Affordances & Signifiers
+
+**Affordance** es lo que un elemento puede hacer. **Signifier** es la señal visual que lo comunica sin necesidad de instrucción. La forma visual ES la instrucción.
+
+**Vocabulario de clickabilidad:**
+
+| Visual cue | Mensaje al usuario |
+|---|---|
+| Fondo relleno + border | "Puedo hacer clic aquí" |
+| Sin fondo, mismo peso que el texto | "Esto es contenido, no acción" |
+| Opacidad 40–50%, desaturado | "Existe pero no está disponible ahora" |
+| Icono adherido a texto | "Son el mismo elemento" |
+| Icono solo, sin fondo | "Soy un botón implícito" |
+
+**Hover signifiers** (web, pointer devices):
+- Revelar atajos de teclado al hacer hover sobre ítems de menú (`⌘N`)
+- Quick actions que aparecen al hover sobre una fila de lista
+- Tooltips contextuales sobre íconos que explican su función
+- Drag handles que aparecen al hover sobre elementos ordenables
+
+Regla: lo que se revela en hover no puede ser la única manera de acceder a esa función. Hover = enhancement, no camino primario.
+
+**Agrupación como signifier (Gestalt — Proximidad):**
+Elementos cercanos señalan relación. El espacio entre elementos señala independencia. El panel de contenido bajo una tab-bar le pertenece a la tab seleccionada sin necesidad de texto. La proximidad comunica sin palabras.
+
+---
+
+### 9.2 Visual Hierarchy
+
+**Los tres instrumentos principales:**
+
+```
+1. SIZE      — Más grande = más importante.
+2. POSITION  — Top-left se lee primero (F-pattern / Z-pattern).
+3. COLOR     — Saturado / alto contraste atrae primero. Desaturado = retrocede.
+```
+
+**La Regla de los 3 Pesos:**
+Exactamente tres niveles de peso visual por composición.
+- Nivel 1 — Primario: tamaño grande + alto contraste
+- Nivel 2 — Secundario: tamaño medio + contraste medio
+- Nivel 3 — Terciario: tamaño pequeño + bajo contraste
+
+Más de tres pesos = ruido visual. El ojo del usuario se cansa y se pierde.
+
+**Proceso de jerarquía:**
+1. Decidir primero QUÉ ES RELEVANTE para el usuario en este contexto.
+2. Luego expresar esa decisión a través de tamaño, posición y color.
+3. No es ciencia exacta — es una guía al servicio de la imaginación del diseñador.
+
+**Ejemplo real (Delivery card):**
+
+```
+Versión sin jerarquía:
+  Restaurant: Chipotle
+  Item: Burrito Bowl
+  Day: Today
+  Time: 9:30am
+  Total Cost: $32.45
+  → Todo igual peso. El ojo no sabe qué leer primero.
+
+Versión con jerarquía y decisión:
+  [Logo] Burrito Bowl          $32.45
+         Today · 9:30am
+  ○ Syracuse, NY
+  ⊙ Jamesville, NY
+  → Logo = identidad / Nombre+precio = lo que importa / Ruta = simbología
+  → 40% menos espacio. 3× más rápido de escanear.
+```
+
+**La imagen como ancla de jerarquía:**
+Las imágenes rompen la monotonía del texto y permiten la asociación instantánea. Un logo o thumbnail ancla la identidad del ítem antes de que el texto sea leído. Toda imagen en una UI debe llevar información, no decorar.
+
+**Simbología en lugar de texto:**
+Un cambio de color, ícono o señal direccional puede reemplazar una etiqueta de texto cuando el símbolo es universalmente entendido en el contexto objetivo.
+
+---
+
+### 9.3 Grids, Layouts & Spacing — Profundizado
+
+**Contexto de uso del grid:**
+- Ideal para elementos repetitivos donde la estructura debe respetarse equitativamente (cards, listas, galerías, contenido social).
+- Para landings personalizadas, el grid funciona como guía flexible, no como regla fija. Cada sección puede tener su propia composición.
+- Esencial para apps responsive donde la coherencia entre breakpoints es crítica.
+
+**El espaciado como comunicación:**
+El espacio entre elementos comunica qué está asociado con qué. Más espacio = más separación conceptual. El espaciado es semántico.
+
+**Escala multiplicadora (4px base, 8px unidad estándar):**
+```
+4px  → micro: padding interno de ícono, gap ícono-texto
+8px  → sm: espaciado entre elementos relacionados
+12px → intermedio (evitar — prefiere 8 o 16)
+16px → md: espaciado estándar, padding de componente
+24px → lg: separación entre grupos de elementos
+32px → xl: separación de secciones
+40px → 2xl: secciones con más respiro
+48px+→ 3xl: layout de página, heroes
+```
+
+Todo es un múltiplo. Esto ayuda al aspecto visual y estético, pero principalmente mantiene consistencia a lo largo de dispositivos con distintas densidades de píxeles.
+
+---
+
+### 9.4 Typography & Font Sizing — Por Contexto
+
+**Dos escalas distintas según el contexto:**
+
+```
+LANDING / MARKETING (máximo impacto visual):
+  H1: 64px  — Display grande, hero
+  H2: 42px  — Sub-headline
+  H3: 32px  — Sección
+  H4: 20px  — Subtítulo menor
+  H5: 16px  — Label destacado
+  H6: 14px  — Label menor
+
+PANEL / APLICACIÓN (densidad de información):
+  H1: 24px  — Título de página
+  H2: 20px  — Título de sección
+  H3: 18px  — Título de componente
+  H4: 16px  — Sub-sección
+  H5: 14px  — Label
+  H6: 12px  — Caption, metadata
+```
+
+**Una sola fuente puede ser suficiente:**
+No hay que complicar buscando múltiples fuentes. Con una sola tipografía, ajustando:
+- `letter-spacing` (tracking) ligeramente unificado = acabado más profesional
+- `font-weight` entre 400 y 700 para crear jerarquía
+- `font-size` con la escala modular
+
+El proceso para elegir: Investigar el mercado objetivo → Analizar qué usan los productos similares → Adaptar desde ahí. Los usuarios llegan con expectativas visuales del mercado donde operan.
+
+---
+
+### 9.5 Color Theory — Sistema Práctico
+
+**Construir una paleta desde un color primario:**
+```
+Operaciones disponibles:
+  Aclarar    → Tints (50–200): fondos, hover states, fills suaves
+  Oscurecer  → Shades (700–950): texto sobre fondo claro, alta énfasis
+  Resaltar   → Base + saturación (400–600): elementos interactivos, CTAs
+  Contrastar → Color complementario (opuesto en rueda): acento de máximo contraste
+
+Escala estándar:
+  50  → Casi blanco (background tint)
+  100 → Tint muy suave
+  200 → Tint suave
+  300 → Mid-light
+  400 → Mid
+  500 → Base (el color primario en sí)
+  600 → Levemente oscuro para texto sobre fondo claro
+  700 → Oscuro
+  800 → Muy oscuro
+  900 → Casi negro
+  950 → Sombra profunda
+```
+
+**Regla complementaria:** Nunca en igual proporción. 80% paleta primaria / 20% complementario máximo. En igual proporción, la tensión visual se convierte en ruido.
+
+**Los colores tienen significados propios — usarlos con propósito:**
+```
+Verde   → Nuevo / activo / éxito / online / posición actual
+Azul    → Foco / seleccionado / informativo / enlace
+Rojo    → Error / peligro / pérdida / acción destructiva
+Amarillo→ Alerta / atención / en progreso / precaución
+Gris    → Deshabilitado / inactivo / secundario / placeholder
+```
+
+**Nunca usar color decorativamente.** El ojo busca significado en el color de forma instintiva. Si un color no comunica algo, quitarlo.
+
+---
+
+### 9.6 Dark Mode — Craft Profundo
+
+**Por qué los usuarios eligen dark mode:**
+Principalmente para reducir el brillo excesivo. Un dark mode lleno de colores neon o muy brillantes contradice directamente esa necesidad.
+
+**Reglas de color en dark mode:**
+
+```
+Superficies:
+  Base:     #121212 (nunca #000000 — muy duro)
+  Raised:   #1E1E1E
+  Overlay:  #2C2C2C
+
+Texto:
+  Primary:  #E5E5E5 (nunca #FFFFFF — muy duro para lectura extendida)
+  Secondary:#A0A0A0
+
+Acentos: desaturar 10–20% respecto al equivalente en light mode.
+  Light mode: #3B82F6 → Dark mode: #60A5FA (más claro, no más brillante)
+  Nunca usar acentos neon/fluorescentes en dark mode.
+
+Colores de estado en dark mode (ligeramente más claros y fríos):
+  Success: #4ADE80 → #22C55E
+  Danger:  #EF4444 → #F87171
+```
+
+**Elevación en dark mode:**
+Las sombras son invisibles sobre superficies oscuras. Reemplazarlas con lightness:
+```
+Base:    #121212
+Raised:  #1E1E1E (+2 puntos de lightness)
+Overlay: #2C2C2C (+4 puntos de lightness)
+```
+La elevación se comunica a través de la claridad superficial, no de sombras.
+
+---
+
+### 9.7 Shadows — Sistema de Elevación
+
+Las sombras comunican qué elementos están más cerca del usuario.
+
+**Las cuatro propiedades de una sombra:**
+1. **Offset (X, Y)** — Dirección de la fuente de luz. Estándar: offset Y positivo (luz desde arriba).
+2. **Blur radius** — Suavidad. Blur grande = luz difusa / elevación alta.
+3. **Spread** — Expansión más allá del borde del elemento. Usar mínimo.
+4. **Color + opacidad** — Nunca negro puro. Usar complemento del surface al 10–30%.
+
+**Escala como tokens:**
+```
+shadow-xs: 0 2px 4px rgba(0,0,0,0.06)    → card sutil, lift
+shadow-sm: 0 4px 8px rgba(0,0,0,0.08)    → input focus, chip
+shadow-md: 0 8px 16px rgba(0,0,0,0.12)   → dropdown, popover
+shadow-lg: 0 16px 32px rgba(0,0,0,0.16)  → modal, drawer
+shadow-xl: 0 32px 64px rgba(0,0,0,0.20)  → overlay de pantalla completa
+```
+
+**Técnica multi-capa (profundidad natural):**
+```css
+box-shadow: 
+  0 1px 3px rgba(0,0,0,0.06),    /* sombra ambiental */
+  0 8px 24px rgba(0,0,0,0.12);   /* sombra direccional */
+```
+Produce profundidad que se percibe como físicamente creíble.
+
+**Inner shadow (inset):** Señala estado presionado o elemento cóncavo.
+```css
+box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+```
+
+**Anti-patrón:** Misma elevación en todos los elementos = ninguno tiene elevación. Reservar sombras fuertes para pocos elementos.
+
+---
+
+### 9.8 Overlays
+
+Los overlays son la superposición de elementos que combinados crean una unidad visual nueva. El caso más común: texto sobre imagen.
+
+**Técnicas para garantizar legibilidad (WCAG + craft):**
+
+```
+1. Gradient overlay
+   → Gradiente semi-transparente de negro 60–80% cubriendo la zona de texto.
+   → Dirección: texto abajo = gradiente oscuro abajo, transparente arriba.
+
+2. Solid color panel
+   → Bloque semi-opaco sobre el que va el texto.
+   → Contraste limpio, aspecto más estructurado.
+
+3. Text shadow
+   → text-shadow: 0 1px 3px rgba(0,0,0,0.8) en texto blanco sobre imagen.
+   → Solo para texto corto (título, etiqueta). No para body copy.
+
+4. Blur backdrop (Glassmorphism)
+   → backdrop-filter: blur(8px) en contenedor semi-opaco.
+   → Alto valor visual. Costo de rendimiento en dispositivos de gama baja.
+```
+
+**Orden de profundidad (z-index lógico):**
+```
+Imagen de fondo 
+  → Overlay de color/gradiente 
+    → Texto primario 
+      → Texto secundario 
+        → CTA button 
+          → Badge/label
+```
+
+**Reglas críticas:**
+- El overlay nunca debe oscurecer más de lo necesario — la imagen aporta contexto.
+- La jerarquía sigue operando dentro del overlay.
+- Nunca overlay neon en dark mode.
+- Nunca color sólido 100% de opacidad — entonces la imagen no aporta nada.
+
+---
+
+### 9.9 Micro Interactions & Emotional Design
+
+**Fundamento conductual (modelo Skinner aplicado a UI):**
+Cada interacción de usuario = estímulo → respuesta del sistema → comportamiento reforzado (o desalentado). Un botón sin respuesta visual = confianza rota. Un botón con transición clara = el comportamiento se vuelve memorable.
+
+**Las micro interacciones van más allá del simple feedback:**
+Son feedback + posibilidad de animación simple o compleja + conversión de elemento + diseño emocional aplicado a la UI.
+
+**Los 4 componentes (Dan Saffer):**
+1. **Trigger** — Qué la inicia (clic, hover, scroll, tiempo transcurrido)
+2. **Rules** — Qué ocurre y en qué secuencia
+3. **Feedback** — Qué percibe el usuario (visual / háptico / sonoro)
+4. **Loops & Modes** — ¿Se repite? ¿Estado final? ¿Modo error?
+
+**Tres niveles de diseño emocional (Norman) en movimiento:**
+- **Visceral** → Primera impresión: ¿la animación se ve pulida o barata?
+- **Behavioral** → ¿Se siente responsiva? ¿Me ayuda a entender el sistema?
+- **Reflective** → ¿Disfruté usarlo? ¿Me sentí respetado?
+
+**Catálogo esencial:**
+
+| Micro Interaction | Trigger | Feedback | Timing |
+|---|---|---|---|
+| Copy to clipboard | click ícono | "Copied!" pill aparece y desaparece | 150ms morph + 2000ms hold + 200ms fade |
+| Like / favorito | click corazón | fill + scale pulse + (opcional) partículas | 200ms fill + 150ms pulse |
+| Button → loading → success | submit | spinner → checkmark draw-on | 100ms fade + response + 300ms checkmark |
+| Quick actions on hover | hover sobre fila | íconos fade-in + slide 4px | 150ms ease-out |
+| Toggle | clic / space | thumb slide + color fill track | 200ms |
+| Celebración de milestone | primer proyecto/upgrade | checkmark + confetti + toast | 300ms + 500ms + 200ms |
+
+**Reglas de las micro interacciones:**
+1. Nunca bloquean al usuario — corren en paralelo a la navegación.
+2. < 300ms = se siente instantáneo. > 300ms = deliberado. Sin zona gris sin propósito.
+3. Loops infinitos (spinners) se detienen en cuanto el contenido está listo.
+4. Delight solo en resultados positivos. Nunca celebrar un error.
+5. Siempre proveer fallback para `prefers-reduced-motion`.
+6. Testear en dispositivo de gama media, no solo en hardware profesional.
+
+---
+
 ## Quick Reference: Principles Distilled
 
-### The 12 Universal Principles
+### The 16 Universal Principles
 
-These appeared across nearly every system studied:
+Synthesized from 20+ design systems + UI/UX Concept theory:
 
 1. **Semantic over visual** — Name things by role, not appearance.
 2. **Accessibility is architecture** — Bake it in from the start; retrofitting fails.
@@ -772,6 +1111,10 @@ These appeared across nearly every system studied:
 10. **Color is semantic** — Color should convey meaning, not just aesthetics.
 11. **Dark mode is a system** — Not an inverted afterthought.
 12. **The system serves the product** — When the system constrains a real user need, the product wins. Document the exception.
+13. **Every interaction needs a response** — Silence from the UI breaks trust and makes behavior unmemorable.
+14. **Visual hierarchy decides before the user does** — Size, Position, Color guide the eye so the user never has to consciously choose where to look.
+15. **Affordances are wordless instructions** — The visual form communicates interactivity before any label does. Design the signifier first.
+16. **Investigar → Analizar → Adaptar** — Research market conventions before designing. Meet users where they are. Then elevate.
 
 ---
 

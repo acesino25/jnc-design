@@ -89,10 +89,123 @@ Rules:
 - Support animated icons for state transitions (loading → success).
   Animation confirms action; it does not decorate.
 
+ICON–TEXT ALIGNMENT (from UI/UX Concept theory)
+- Icon size must match the line-height of accompanying text.
+  Text 15px / line-height 24px → icon 24×24px.
+- Gap between icon and text: 8px (sm spacing token).
+- Align to baseline, not cap height.
+- Icon without visible background = implicit ghost button.
+  Apply 5 interaction states to it as with any button.
+- Minimum tap target: 44×44px regardless of visual icon size.
+
+BUTTON PADDING FORMULA (2× rule)
+- Horizontal padding = 2× font size of button label.
+- Vertical padding = 1× font size.
+- Example: 16px label → 32px horizontal / 16px vertical padding.
+  Produces professional-looking buttons without guessing.
+
+━━━ VISUAL HIERARCHY — THE THREE TOOLS ━━━
+Hierarchy prevents the user's eye from getting lost in information.
+The three primary levers (by impact):
+
+1. SIZE     → Bigger = more important. Relative scale signals priority.
+2. POSITION → Top-left is read first (F-pattern scan). Primary content 
+              belongs top-left or top-center within any card or section.
+3. COLOR    → Saturated / high-contrast attracts first. Muted = recedes.
+
+THE 3-WEIGHT RULE
+Apply exactly three levels of visual weight per composition:
+  Level 1 — Primary:   large + high contrast  (read first)
+  Level 2 — Secondary: medium + medium contrast (supporting info)
+  Level 3 — Tertiary:  small + low contrast   (metadata, labels)
+More than three visual weights creates noise and scanning fatigue.
+
+INFORMATION ARCHITECTURE BEFORE HIERARCHY
+Decide WHAT IS RELEVANT before deciding how to show it.
+Then make that decision visible through size, position, and color.
+  Example: an order summary card.
+    Wrong: flat list of equal-weight label:value pairs
+    Right: logo + name (identity) / date+time (secondary) / 
+           price in accent color (decision factor) / 
+           route via icon symbology (spatial, compact)
+  Result: same data, less space, faster comprehension.
+
+SYMBOLOGY OVER TEXT
+A color change, icon, or directional cue can replace a text label.
+Use when the symbol is universally understood in the target context.
+  Example: pin icon (hollow → filled) + dotted line between them 
+           = route from A to B. No words needed.
+
+IMAGE AS HIERARCHY ANCHOR
+Images break text monotony and enable instant association.
+A logo/thumbnail anchors identity before any text is read.
+Every image must carry information. Decorative images add visual 
+noise without contributing to comprehension.
+
+━━━ COLOR THEORY EXPANDED ━━━
+
+COLOR SCALE FROM ONE SEED
+Generate 10-step tone scales (50→950) from a single base:
+  50–200:  Tints — backgrounds, hover states, subtle fills
+  300–400: Light mids — bordered components, chips
+  500:     Brand base — the primary color itself
+  600–700: Darks — text on light backgrounds, high emphasis
+  800–950: Deep — near-black variants, maximum contrast
+
+Operations from one primary color:
+  Lighten → use 50–200 range for surface tokens
+  Darken  → use 700–950 range for text and emphasis
+  Accent  → 400–600 range for interactive elements
+  Contrast → complementary hue (opposite on wheel) at 80/20 ratio
+
+COMPLEMENTARY COLOR RATIO
+Never use complementary colors at equal proportion.
+Ratio: 80% primary palette / 20% complementary accent.
+Equal proportion creates visual fatigue and destroys focus.
+
+COLOR MEANINGS (universal conventions — do not break them)
+  Green  → New / active / healthy / success / online
+  Blue   → Focus / selected / informational / link
+  Red    → Error / danger / loss / destructive action
+  Yellow → Warning / caution / in-progress / attention
+  Gray   → Disabled / inactive / secondary / placeholder
+
+THE MARKET RESEARCH PROCESS
+Before building a color system for a new product:
+  1. Investigar → research competitors and market (Mobbin, Dribbble)
+  2. Analizar   → extract visual conventions users already understand
+  3. Adaptar    → design within those conventions, then improve
+Users arrive with visual expectations from existing products.
+Meet them first. Elevate second.
+
+━━━ SHADOWS & ELEVATION ━━━
+Shadows communicate which elements are closer to the user.
+
+Shadow scale as tokens:
+  shadow-xs: 0 2px 4px rgba(0,0,0,0.06)    → flat card lift
+  shadow-sm: 0 4px 8px rgba(0,0,0,0.08)    → input focus, chip
+  shadow-md: 0 8px 16px rgba(0,0,0,0.12)   → dropdown, popover
+  shadow-lg: 0 16px 32px rgba(0,0,0,0.16)  → modal, drawer
+  shadow-xl: 0 32px 64px rgba(0,0,0,0.20)  → full overlay
+
+Multi-layer shadow technique (natural depth):
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.12);
+
+Shadow color: never pure black. Use the surface's tinted complement 
+at 10–30% opacity for shadows that feel natural.
+
+Inner shadow (inset): signals pressed state or recessed element.
+  inset 0 2px 4px rgba(0,0,0,0.08)
+
+Dark mode elevation: shadows are invisible on dark surfaces.
+Replace with surface lightness:
+  Base: #121212 → Raised: #1E1E1E → Overlay: #2C2C2C
+
 ━━━ OUTPUT FORMAT ━━━
 When answering foundation questions:
 1. Specify which foundation layer the question touches.
 2. Give a concrete recommendation with token names when applicable.
 3. Flag any accessibility implications.
 4. Show an example (token, code snippet, or scale) when helpful.
+5. If visual hierarchy is involved, state the 3-weight decision explicitly.
 ```

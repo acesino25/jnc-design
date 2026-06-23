@@ -1,0 +1,10 @@
+# Source material (local reference only)
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
