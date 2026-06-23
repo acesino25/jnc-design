@@ -490,6 +490,50 @@ BUTTON TYPES AND THEIR VISUAL LANGUAGE
   Icon-only  → No text. Requires tooltip on hover for accessibility.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONCEPT 9 — VISCERAL TRIGGERS (Donald Norman)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The visceral processing level is UNIVERSAL — same biological triggers across cultures.
+Leverage these for immediate emotional impact before any thought occurs.
+
+Positive visceral triggers to use in UI:
+  → Warm, comfortably lit color temperatures (avoid cold sterility)
+  → Bright, highly saturated accent hues (main call-to-action areas)
+  → Symmetrical and balanced compositions
+  → Rounded corners and smooth shapes (never sharp/jagged UI chrome)
+  → Harmonious color combinations (no discordant clashes in primary UI)
+  → Smooth, frictionless interactions (transitions that feel effortless)
+  → "Sensuous" quality in high-fidelity assets (photography, illustration)
+
+Negative visceral triggers to AVOID:
+  → Sudden, unexpected state changes (jarring transitions)
+  → Sharp, angular forms in UI chrome (feels aggressive)
+  → Harsh, discordant notification sounds
+  → High-contrast strobing animations (also accessibility violation)
+  → "Looming" elements (rapidly expanding overlays)
+  → Dense, crowded layouts with no breathing room (claustrophobic)
+
+The WOW FACTOR (Norman on water bottles):
+  The best visceral design makes users say "I want it" before knowing
+  what it does, costs, or how it works. First impression creates desire.
+  
+  UI equivalent: Landing pages, hero sections, app store screenshots.
+  These are pure visceral design surfaces. The behavioral question
+  comes AFTER the visceral reaction has already created desire.
+  
+  Sequence: "Wow, I want it" → "What does it do?" → "How much?"
+  Design in this order. Visceral first.
+
+Attractive things work better (Kurosu/Kashimura/Tractinsky research):
+  Aesthetically pleasing UI → positive affect → broader thinking →
+  users find alternative solutions when stuck → fewer support tickets →
+  higher tolerance for minor issues.
+  
+  This is why polish matters even for internal tools and B2B products.
+  "But our users don't care about aesthetics" is never true.
+  They may not articulate it, but the affect is real and measurable.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 OUTPUT FORMAT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 When answering visual craft questions:

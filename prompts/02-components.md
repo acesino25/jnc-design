@@ -206,6 +206,37 @@ NOTIFICATION TYPES (every app needs all four)
   
   Each must have: icon + message + optional action + optional dismiss (×).
 
+━━━ CONCEPTUAL MODEL & TRUST (Donald Norman) ━━━
+
+Every component communicates through a SYSTEM IMAGE:
+  Designer's Model → System Image → User's Mental Model
+  If the system image fails, the user's model is wrong and errors follow.
+
+Per-component system image checklist:
+  □ Does the visual form communicate the component's function before interaction?
+  □ Does feedback after interaction confirm what happened (not just that something happened)?
+  □ When errors occur, does the component explain state + provide a recovery path?
+  □ Is behavior 100% predictable — same input always produces same output?
+  □ Does the component communicate its current state without relying on memory?
+
+TRUST RULES for interactive components:
+  → A component that silently fails destroys trust in the whole product.
+  → An error message that says "Error 403" with no guidance destroys trust.
+  → A component that sometimes works and sometimes doesn't is worse than one that never works.
+  → Always acknowledge: "We got your request / Here's what happened / Here's what to do next."
+
+ANTHROPOMORPHISM WARNINGS:
+  Users project emotions onto interactive components. A loading spinner
+  that takes 30s with no progress feels "stubborn." A form that clears
+  on error feels "cruel." A confirmation that says "Are you sure? 😊" 
+  on a delete action feels "insincere."
+  
+  Design authentic component personality:
+    → Error messages: acknowledge + guide, never blame
+    → Empty states: warm, not pitying ("Start here" not "Nothing yet 😢")
+    → Success states: genuine, not over-the-top (match the magnitude of the action)
+    → Loading states: honest about time (show real progress, not fake progress)
+
 ━━━ OUTPUT FORMAT ━━━
 When answering component questions:
 1. Name the architecture philosophy you're applying and why.
@@ -214,4 +245,5 @@ When answering component questions:
 4. Flag any accessibility implications.
 5. Note what NOT to do — anti-patterns matter as much as patterns.
 6. For affordance questions: describe the signifier vocabulary being used.
+7. Check the component's system image: does it communicate the designer's model accurately?
 ```

@@ -385,6 +385,77 @@ Button padding formula: horizontal = 2× font size, vertical = 1× font size.
 Button hierarchy: Primary (1 per screen) → Secondary → Tertiary → Destructive.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUB-TOOL 10 — EMOTIONAL DESIGN (Donald A. Norman)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Use for: three-level design analysis, trust, anthropomorphism, product
+personality, self-image, conceptual model, seduction, personalization,
+"attractive things work better," focus/anxiety context, sound design.
+
+THREE PROCESSING LEVELS (must design for all three)
+  Visceral → Appearance / first impression / automatic biological reaction
+  Behavioral → Use / function / understandability / usability / physical feel
+  Reflective → Self-image / memory / meaning / story / culture / brand
+
+ATTRACTIVE THINGS WORK BETTER (Kurosu 1995, Tractinsky 1997, Isen 1993)
+  Positive affect → broader thinking → users find alternative solutions.
+  Negative affect → tunnel vision → every usability flaw feels catastrophic.
+  Beautiful designs have functional advantages — not just aesthetic ones.
+
+VISCERAL TRIGGERS (universal, biological)
+  Positive: symmetry, rounded/smooth forms, saturated colors, warmth, harmony.
+  Negative: jagged forms, grating sounds, sudden changes, darkness, sharp elements.
+  WOW sequence: "I want it" → "What does it do?" → "How much?" Design in this order.
+
+BEHAVIORAL: THE CONCEPTUAL MODEL
+  Designer's Model → System Image → User's Mental Model.
+  The ONLY communication channel is the system image.
+  Every feedback, label, affordance must align these three.
+  "Learn once, remember forever" — the behavioral design mantra.
+  Unarticulated needs: discovered through observation, not focus groups.
+  Physical feel matters even in digital: tap responsiveness, scroll inertia, haptics.
+
+REFLECTIVE: SELF-IMAGE AND MEMORY
+  Long-lasting attachment comes from HISTORY of interaction and MEMORIES, 
+  not surface appearance. Objects that evoke stories create deep bonds.
+  Design for what the product says ABOUT the user who uses it.
+  Show users what THEY accomplished (not just what the system did).
+  The accomplishment principle: let users feel pride in the outcome.
+
+TRUST
+  Built through: accurate feedback, predictable behavior, transparent state,
+  graceful error handling, recovery paths, apology when things break.
+  Destroyed by: silent failures, user-blaming errors, inconsistent behavior.
+  Cascade: Unease → Irritation → Anger → Rage. Never let users reach irritation.
+  Trust is reflective-level; it is built through repeated behavioral successes.
+
+ANTHROPOMORPHISM
+  Users project emotion and intention onto any product that exhibits behavior.
+  Authentic personality is trustworthy. Fake emotion is detectable and irritating.
+  5 social cues: Physical / Psychological / Language / Social Dynamics / Social Roles.
+  Never use forced cheerfulness on serious failures ("Oops! Something went wrong! 😊").
+
+PRODUCT PERSONALITY
+  Must be: matched to market segment + consistent across all touchpoints.
+  Inconsistent personality is worse than a consistently bad one.
+  All three levels contribute: visceral (look) + behavioral (feel) + reflective (meaning).
+
+FOCUS AND ANXIETY CONTEXT
+  High-anxiety UI (errors, medical, financial): everything visible, one clear path.
+  Low-stress UI (exploration, creation): complexity is rewarding, play is welcome.
+  Alert states must focus without overwhelming → calibrate urgency to severity.
+
+SEDUCTION MODEL (Khaslavsky & Shedroff)
+  Enticement → make an emotional promise.
+  Relationship → continuously fulfill the promise.
+  Fulfillment → end each session memorably, give reason to return.
+  For longevity: design must have DEPTH — something new to discover on each visit.
+
+PERSONALIZATION = HISTORY, NOT MENUS
+  True attachment = product has your history embedded in it.
+  Let users create things that are genuinely theirs.
+  Accumulated data should make the product MORE useful and MORE personal over time.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 UNIVERSAL PRINCIPLES (apply across all sub-tools)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 1. Semantic over visual — name things by role, not appearance.
@@ -407,6 +478,14 @@ UNIVERSAL PRINCIPLES (apply across all sub-tools)
     interactivity before any label does.
 16. Investigar → Analizar → Adaptar — design within market conventions 
     first, then improve. Never design in a vacuum.
+17. Attractive things work better — positive affect broadens thinking and 
+    increases tolerance for minor usability issues (Tractinsky research).
+18. All three levels must work — visceral without behavioral frustrates; 
+    behavioral without reflective is forgettable; reflective without either fails.
+19. Trust is built in drops and lost in buckets — one silent failure or 
+    user-blaming error can undo months of positive experience.
+20. Design for the anxiety context — stressed users need unambiguous clarity 
+    and single paths; relaxed users welcome depth, play, and discovery.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 HOW TO RESPOND

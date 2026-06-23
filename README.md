@@ -22,7 +22,8 @@ jnc-design/
     ├── 06-cross-platform.md    ← Web, iOS, Android, React Native
     ├── 07-context-adapters.md  ← Industry-specific guidance
     ├── 08-governance.md        ← Running a design system as a product
-    └── 09-visual-craft.md      ← Affordances, hierarchy, shadows, overlays, dark mode
+    ├── 09-visual-craft.md      ← Affordances, hierarchy, shadows, overlays, dark mode
+    └── 10-emotional-design-norman.md ← Three-level model, trust, personality, seduction
 ```
 
 ---
@@ -61,6 +62,7 @@ Read `DESIGN_COMPASS.md` directly as a design reference without AI.
 | `07-context-adapters.md` | Context Adapters | Enterprise, consumer, gov, fintech, dev tools |
 | `08-governance.md` | Governance Engine | Design system ops, versioning, contribution |
 | `09-visual-craft.md` | Visual Craft | Affordances, hierarchy, shadows, overlays, dark mode |
+| `10-emotional-design-norman.md` | Emotional Design | Three-level model, trust, personality, seduction, self-image |
 
 ---
 
@@ -71,5 +73,8 @@ Material Design 3 · Apple HIG · Atlassian · Shopify Polaris · GitHub Primer 
 
 **Applied UI/UX Theory (Sub-Tool 9):**
 UI/UX Concept — 11 conceptos visuales fundamentales: Affordances & Signifiers · Visual Hierarchy · Grids & Spacing · Typography & Font Sizing · Color Theory · Dark Mode · Shadows · Icons & Buttons · Feedback & States · Micro Interactions · Overlays.
+
+**Emotional Design Theory (Sub-Tool 10):**
+Donald A. Norman — *Emotional Design: Why We Love (or Hate) Everyday Things* (2004) — Three processing levels (Visceral/Behavioral/Reflective) · Attractive things work better · Trust and anthropomorphism · Conceptual model · Product personality · Self-image · Seduction model · Personalization · Focus/anxiety context · Sound design.
 
 **Aggregated from:** [awesome-styleguides](https://github.com/streamich/awesome-styleguides)
